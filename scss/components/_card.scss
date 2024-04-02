@@ -1,0 +1,79 @@
+@import '../scss-ultils/mixin';
+@import '../scss-ultils/variables';
+.card {
+    padding: $padding-xsmall $padding-xsmall $padding-small $padding-xsmall;
+    background: $clr-primary-green;
+    img {
+        margin-bottom: $margin-xsmall;
+    }
+
+    h2 {
+        color: $clr-primary-gray;
+        font-size: $font-size-l;
+        font-weight: 500;
+        line-height: 2.113rem;
+
+        margin-bottom: $margin-xxsmall;
+    }
+
+    h3 {
+        color: $clr-primary-black;
+        font-size: 3rem;
+        font-weight: 500;
+        line-height: 3.522rem;
+
+        margin-bottom: 0.8rem;
+    }
+
+    h4 {
+        color: $clr-primary-black;
+        font-size: $font-size-l;
+        font-weight: 500;
+        line-height: 2.113rem;
+
+        margin-bottom: $margin-small;
+    }
+
+    p {
+        color: $clr-primary-light-green;
+        font-size: $font-size-xl;
+        font-weight: 500;
+        line-height: 2.818rem;
+
+        margin-bottom: $margin-xsmall;
+    }
+
+    .btn-border {
+        padding: 2.1rem 10.75rem;
+        text-wrap: nowrap;
+    }
+}
+
+@media (max-width: 576px) {
+    .card {
+        img {
+            margin-bottom: 1.5rem;
+        }
+
+        h2 {
+            font-size: $font-size-m;
+            line-height: 1.878rem;
+        }
+
+        h3 {
+            font-size: $font-size-xl;
+            line-height: 2.818rem;
+
+            margin-bottom: $margin-xxsmall;
+        }
+
+        h4 {
+            font-size: $font-size-m;
+            line-height: 1.878rem;
+        }
+
+        p {
+            margin-bottom: $margin-xxsmall;
+        }
+    }
+}

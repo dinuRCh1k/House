@@ -1,0 +1,215 @@
+@import '../scss-ultils/mixin';
+@import '../scss-ultils/variables';
+
+.header {
+    padding: 3.3rem 0 3.2rem 0;
+    background: $clr-primary-green;
+
+    .nav {
+        @include flex-row();
+
+        .nav-logo {
+            a {
+                @include flex-row-center();
+                column-gap: 0.8rem;
+
+                color: $clr-primary-light-green;
+                font-size: $font-size-x;
+                font-weight: 700;
+                line-height: 2.348rem;
+            }
+        }
+
+        .nav-list {
+            @include flex-row-center();
+            column-gap: 6rem;
+
+            .nav-link {
+                color: $clr-primary-black;
+                font-size: $font-size-m;
+                font-weight: 500;
+                line-height: 2.348rem;
+
+                position: relative;
+
+                transition: $transition-fast;
+                -webkit-transition: $transition-fast;
+                -moz-transition: $transition-fast;
+                -ms-transition: $transition-fast;
+                -o-transition: $transition-fast;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    background: $clr-primary-black;
+                    width: 0;
+                    height: 0.1rem;
+                    transition: $transition-fast;
+                    -webkit-transition: $transition-fast;
+                    -moz-transition: $transition-fast;
+                    -ms-transition: $transition-fast;
+                    -o-transition: $transition-fast;
+                }
+
+                &:hover::before {
+                    width: 100%;
+                }
+            }
+
+            .nav-icon {
+                &:hover {
+                    color: $clr-primary-yellow;
+                }
+
+                &:hover::before {
+                    transform: scale(0);
+                    -webkit-transform: scale(0);
+                    -moz-transform: scale(0);
+                    -ms-transform: scale(0);
+                    -o-transform: scale(0);
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .header {
+        padding: 1.6rem 0 1.6rem 0;
+
+        .nav {
+            align-items: flex-start;
+            flex-direction: column;
+            row-gap: 1.6rem;
+
+            .nav-logo {
+                border-bottom: 0.1rem solid $clr-border;
+                width: 51rem;
+                padding-bottom: 1.6rem;
+
+                a {
+                    width: 14.3rem;
+                    margin: 0 auto;
+                }
+            }
+
+            .nav-list {
+                column-gap: 0;
+
+                .nav-link {
+                    margin-right: 6rem;
+                }
+
+                .last {
+                    margin-right: 0;
+                }
+
+                .nav-icon {
+                    margin-left: 15.4rem;
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 320px) {
+    .header {
+        background: transparent;
+        padding: 1.6rem 0 0 0;
+
+        .nav {
+            display: none;
+        }
+
+        .header__phone {
+            display: block;
+
+            .nav-2 {
+                .nav-logo {
+                    margin-bottom: 1.6rem;
+
+                    a {
+                        @include flex-row-center();
+                        column-gap: 0.8rem;
+
+                        color: $clr-primary-light-green;
+                        font-size: $font-size-x;
+                        font-weight: 700;
+                        line-height: 2.348rem;
+
+                        width: 14.3rem;
+                        margin: 0 auto;
+                    }
+                }
+
+                .nav-flex {
+                    background: $clr-primary-green;
+                    padding: 1.6rem 1.5rem;
+
+                    .container {
+                        @include flex-row();
+                    }
+
+                    i {
+                        cursor: pointer;
+                        font-size: $font-size-x;
+
+                        &:last-child {
+                            font-size: $font-size-m;
+                        }
+                    }
+                }
+
+                .open {
+                    .container {
+                        flex-direction: column;
+                        align-items: flex-start;
+                        justify-content: left;
+                        row-gap: 3rem;
+                        height: 35rem;
+
+                        .nav-list {
+                            @include flex-column();
+                            row-gap: 5rem;
+
+                            .nav-link {
+                                color: $clr-primary-black;
+                                font-size: $font-size-m;
+                                font-weight: 500;
+                                line-height: 2.113rem;
+                                transition: $transition-fast;
+                                -webkit-transition: $transition-fast;
+                                -moz-transition: $transition-fast;
+                                -ms-transition: $transition-fast;
+                                -o-transition: $transition-fast;
+                                position: relative;
+
+                                &::before {
+                                    content: '';
+                                    position: absolute;
+                                    left: 0;
+                                    bottom: 0;
+                                    background: $clr-primary-black;
+                                    width: 0;
+                                    height: 0.1rem;
+                                    transition: $transition-fast;
+                                    -webkit-transition: $transition-fast;
+                                    -moz-transition: $transition-fast;
+                                    -ms-transition: $transition-fast;
+                                    -o-transition: $transition-fast;
+                                }
+
+                                &:hover::before {
+                                    width: 100%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

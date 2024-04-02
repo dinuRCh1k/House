@@ -1,0 +1,73 @@
+@import '../scss-ultils/mixin';
+@import '../scss-ultils/variables';
+.res {
+    margin-top: $margin-xxmedium;
+    .res__title {
+        @include flex-row();
+        margin-bottom: $margin-small;
+        .res__buttons {
+            display: flex;
+            column-gap: 3.2rem;
+            .first {
+                background: $clr-primary-dark-green;
+            }
+        }
+    }
+
+    .res__grid {
+        display: grid;
+        grid-template-columns: repeat(3, 35rem);
+        gap: 3rem;
+    }
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 35rem);
+        gap: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .res {
+        .res__grid {
+            grid-template-columns: repeat(2, 33rem);
+        }
+        .grid {
+            grid-template-columns: repeat(2, 33rem);
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .res {
+        .res__title {
+            align-items: flex-start;
+            flex-direction: column;
+            row-gap: 2rem;
+        }
+
+        .res__grid {
+            grid-template-columns: repeat(2, 24rem);
+        }
+        .grid {
+            grid-template-columns: repeat(2, 24rem);
+        }
+    }
+}
+
+@media (max-width: 320px) {
+    .res {
+        .res__title {
+            overflow-x: hidden;
+            .res__buttons {
+                column-gap: 2rem;
+            }
+        }
+
+        .res__grid {
+            grid-template-columns: 29rem;
+        }
+        .grid {
+            grid-template-columns: 29rem;
+        }
+    }
+}

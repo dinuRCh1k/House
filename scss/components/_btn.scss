@@ -1,0 +1,118 @@
+@import '../scss-ultils/mixin';
+@import '../scss-ultils/variables';
+//btn-border
+.btn-border {
+    display: inline-block;
+
+    padding: 2.1rem $padding-xmedium;
+    border: 0.1rem solid $clr-primary-light-green;
+
+    color: $clr-primary-light-green;
+    font-size: $font-size-x;
+    font-weight: 500;
+    line-height: 2.348rem;
+
+    transition: $transition-fast;
+    -webkit-transition: $transition-fast;
+    -moz-transition: $transition-fast;
+    -ms-transition: $transition-fast;
+    -o-transition: $transition-fast;
+    &:hover {
+        background: $clr-primary-light-green;
+        color: $clr-white;
+    }
+}
+
+@media (max-width: 768px) {
+    .btn-border {
+        padding: 1.85rem 5.15rem !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .btn-border {
+        padding: 1.45rem 4.1rem !important;
+
+        font-size: $font-size-l;
+        line-height: 2.113rem;
+    }
+}
+
+@media (max-width: 320px) {
+    .btn-border {
+        padding: 1.45rem 2.9rem !important;
+    }
+}
+
+//btn-yellow
+.btn-yellow {
+    display: inline-block;
+
+    padding: 2.1rem $padding-xmedium;
+    background: $clr-primary-yellow;
+
+    color: $clr-primary-black;
+    font-size: $font-size-x;
+    font-weight: 500;
+    line-height: 2.348rem;
+
+    transition: $transition-fast;
+    -webkit-transition: $transition-fast;
+    -moz-transition: $transition-fast;
+    -ms-transition: $transition-fast;
+    -o-transition: $transition-fast;
+    &:hover {
+        box-shadow: $shadow;
+    }
+}
+
+@media (max-width: 768px) {
+    .btn-yellow {
+        padding: 1.85rem 3.65rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .btn-yellow {
+        padding: 1.45rem 3.5rem;
+
+        font-size: $font-size-l;
+        line-height: 2.113rem;
+    }
+}
+
+@media (max-width: 320px) {
+    .btn-yellow {
+        padding: 1.45rem 8.35rem;
+    }
+}
+
+//btn-small
+.btn-small {
+    display: inline-block;
+
+    padding: $padding-xxsmall $padding-xsmall;
+    background: $clr-primary-lightx-green;
+    border-radius: $radius;
+
+    color: $clr-primary-white;
+    font-size: $font-size-x;
+    font-weight: 500;
+    line-height: 2.348rem;
+
+    transition: $transition-fast;
+    -webkit-transition: $transition-fast;
+    -moz-transition: $transition-fast;
+    -ms-transition: $transition-fast;
+    -o-transition: $transition-fast;
+    &:hover {
+        background: $clr-primary-dark-green;
+    }
+}
+
+@media (max-width: 576px) {
+    .btn-small {
+        font-size: $font-size-l;
+        line-height: 2.113rem;
+    }
+}
